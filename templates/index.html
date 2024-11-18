@@ -1,0 +1,102 @@
+{% extends "_base.html" %}
+{% load static %}
+{% block content %}
+    
+
+<h1 class="title">Calcular prestaciones</h1>
+<div class="container">
+  <!-- Calculadora -->
+  <div class="calculator">
+    <h2 class="subtitle">Calculo de Salario</h2>
+
+    <!-- Campo para ingresar salario -->
+    <form method="POST" action="">
+      {% csrf_token %}
+      
+      <div class="form-group">
+        <label for="salario" class="label">Salario Mensual</label>
+        <input
+          type="number"
+          id="salario"
+          name="salario"
+          class="input"
+          placeholder="Ingrese su salario"
+        />
+      </div>
+
+      <!-- Etiquetas de detalles -->
+      <div class="details">
+        <div class="detail-item">
+          <span class="label">Salario:</span>
+          <span id="afp-patronal" class="value">${{ salario|default:"0.00" }}</span>
+        </div>
+        <div class="detail-item">
+          <span class="label">AFP Patronal:</span>
+          <span id="afp-patronal" class="value">${{ afp_patronal|default:"0.00" }}</span>
+        </div>
+        <div class="detail-item">
+          <span class="label">ISSS Patronal:</span>
+          <span id="isss-patronal" class="value">${{ isss_patronal|default:"0.00" }}</span>
+        </div>
+        <div class="detail-item">
+          <span class="label">ISSS Laboral:</span>
+          <span id="isss-laboral" class="value">${{ isss_laboral|default:"0.00" }}</span>
+        </div>
+        <div class="detail-item">
+          <span class="label">AFP Laboral:</span>
+          <span id="afp-laboral" class="value">${{ afp_laboral|default:"0.00" }}</span>
+        </div>
+        <div class="detail-item">
+          <span class="label">Salario(-)AFP:</span>
+          <span id="salario-afp" class="value">${{ salario_menos_afp|default:"0.00" }}</span>
+        </div>
+        <div class="detail-item">
+          <span class="label">Descuento Total:</span>
+          <span id="descuento-total" class="value">${{ descuento_total|default:"0.00" }}</span>
+        </div>
+        <div class="detail-item">
+          <span class="label">Impuesto sobre la Renta:</span>
+          <span id="impuesto-renta" class="value">${{ isr|default:"0.00" }}</span>
+        </div>
+        <div class="detail-item">
+          <span class="label">Salario Líquido:</span>
+          <span id="salario-liquido" class="value">${{ salario_neto|default:"0.00" }}</span>
+        </div>
+      </div>
+
+      <!-- Botón de calcular -->
+      <div class="form-group">
+        <button
+          type="submit"
+          class="button"
+          onclick="calcularPrestaciones()"
+        >
+          Calcular Prestaciones
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Sección explicativa -->
+  <div class="info-section">
+    <h2 class="subtitle">¿Cómo funciona?</h2>
+    <p class="text">
+      Esta calculadora está diseñada para ayudarle a estimar sus prestaciones laborales en El Salvador. 
+      Solo necesita ingresar su salario mensual, y el sistema calculará automáticamente:
+    </p>
+    <ul class="list">
+      <li>Los aportes patronales al ISSS y AFP.</li>
+      <li>Sus deducciones laborales para ISSS y AFP.</li>
+      <li>El salario neto después de todas las deducciones.</li>
+      <li>El impuesto sobre la renta aplicable.</li>
+    </ul>
+    <p class="text">
+      Este cálculo es una herramienta informativa y no sustituye el cálculo oficial realizado por su empleador. Asegúrese de revisar con un profesional para información precisa.
+    </p>
+    <h2 class="subtitle">Aviso</h2>
+    <p class="text">Proyecto open source desarrollado con Django Framework, TailwindCSS y Python.</p>
+    <span class="footer">© 2024 <a href="https://www.linkedin.com/in/lk-ramos/" class="link">Luis Ramos</a>. All Rights Reserved.</span>
+  </div>
+</div>
+
+{% endblock content %}
