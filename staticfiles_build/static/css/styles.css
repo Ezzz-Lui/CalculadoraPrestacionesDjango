@@ -1,0 +1,154 @@
+/* Global styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8fafc;
+    color: #1f2937;
+  }
+  
+  h1, h2 {
+    margin: 0 0 1rem;
+    font-weight: 600;
+    color: #111827;
+  }
+  
+  h1.title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form styles */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #374151;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background-color: #f9fafb;
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+  }
+  
+  .input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  }
+  
+  /* Details styles */
+  .details {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: #f9fafb;
+  }
+  
+  .detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .detail-item:last-child {
+    border-bottom: none;
+  }
+  
+  .label {
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
+  
+  .value {
+    font-weight: 600;
+    color: #111827;
+  }
+  
+  /* Button styles */
+  .button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #3b82f6;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .button:hover {
+    background-color: #2563eb;
+  }
+  
+  /* Info Section */
+  .info-section {
+    margin-top: 3rem;
+    padding: 1rem;
+  }
+  
+  .text {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.6;
+  }
+  
+  .list {
+    list-style-type: disc;
+    margin: 1rem 0 1rem 1.5rem;
+    color: #4b5563;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1f2937;
+  }
+  
+  /* Footer styles */
+  .footer {
+    display: block;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
+  
+  .footer .link {
+    color: #3b82f6;
+    text-decoration: none;
+  }
+  
+  .footer .link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Utility classes */
+  .hidden {
+    display: none;
+  }
+  
