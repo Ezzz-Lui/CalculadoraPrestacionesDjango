@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-rgry#$s7naj8^$vko@7u(rauo9=ed76hk$y1&*8ln@r38w_^^$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '*']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '*', 'calculadoraprestaciones.azurewebsites.net']
 
 
 # Application definition
@@ -48,10 +48,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+
 ]
 
 ROOT_URLCONF = 'calculadora_prestaciones.urls'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
