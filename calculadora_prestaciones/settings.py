@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-rgry#$s7naj8^$vko@7u(rauo9=ed76hk$y1&*8ln@r38w_^^$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '*']
 
@@ -119,7 +119,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 # Directorios donde buscar archivos estáticos
 STATICFILES_DIRS = [
     BASE_DIR / "static",  # Agrega la carpeta 'static' en la raíz
